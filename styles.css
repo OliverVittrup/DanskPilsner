@@ -1,0 +1,746 @@
+/* GENERELLE REGLER FOR ALLE SIDER */
+*{
+margin:0;
+padding:0;
+}
+/*Animationer*/
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+/*baggrundsfarver til de forskellige sider*/
+body{
+background-color:white;
+}
+
+/* HEADER */
+
+header{
+width:100%;
+height:45px;
+  
+padding-top: 20px;
+padding-bottom: 25px;
+  
+display:flex;
+justify-content: space-around;
+  
+position:sticky;
+z-index: 2;
+top:-1px;
+background-color: white;
+border-bottom: 1px solid #017129; 
+}
+  
+  
+/* Navbar spacing*/
+nav{
+display: flex;
+gap: 30px;
+padding-left:420px;
+margin-left: 420px;
+}
+  
+/* "Event" i headeren styling, skal ikke være dropdown */
+nav > a{
+background-color: white;
+color: black;
+padding: 10px;
+border: none;
+letter-spacing: 1pt;
+text-decoration: none;
+}
+  
+/* dropdown styling i navbaren */
+.dropbtn {
+background-color: white;
+color:#017129;
+padding: 10px;
+font-size: 17pt;
+border: none;
+font-family: 'Orelega One', cursive;
+letter-spacing: 1pt;
+transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
+/*Hover effekten i navbar---https://css-tricks.com/css-link-hover-effects/---*/
+}
+.dropbtn:hover {
+box-shadow: inset 230px 0 0 0 #017129;
+color: white;
+}
+    
+  
+/* display none, da content i dropdown skal være gemt væk når man ikke hover over det */
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: white;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+  
+.dropdown-content a {
+color:#017129;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+font-family: 'Orelega One', cursive;  
+}
+  
+/* skift af baggrundfarve når man hover */
+.dropdown-content a:hover {
+background-color:#017129;
+color: white;
+}
+  
+/* Display bliver ændret til blok, for at vise content når man hover */
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+
+/* BURGER MENU (EKSTERN HTML SIDE) */
+
+#burgermenubody{
+background-color:#017129;
+color: white;
+}
+  
+#burgermenu{
+gap: 50px;
+
+display:flex;
+flex-direction: column;
+align-items: center;
+
+padding: 20%;
+
+margin-left: 0;
+}
+  
+.burgermenunavikon{
+width: 40px;
+height: 40px;
+}
+  
+#burgermenuexit > img{
+width: 30px;
+height: 30px;
+padding: 6%;
+}
+   
+#mobilemenubutton > img{
+width: 40px;
+height: 40px;
+margin-right: 300px;
+}
+img#logo {
+position: fixed;
+left: 2%;
+bottom: 89%;
+}
+  
+
+
+
+                /*----MAIN CONTENT----*/
+/*__________________________________________________*/
+
+/*FORSIDE*/
+
+/*Hero section*/
+section#hero{
+display: flex;
+justify-content: center;
+    
+width:100%;
+height: 630px;
+background-image:url("images/hero.png");
+background-size:cover;
+background-repeat:no-repeat;
+
+box-shadow: 7px 7px 12px 7px rgb(47, 47, 47);
+border-bottom: #017129 2px solid;
+
+animation: fadeIn;
+animation-duration: 3s;
+animation-delay: 0s;
+}
+section#hero > div > h2{
+margin-top: 120px;
+
+font-size: 70pt;
+color: white;
+text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+
+animation: fadeIn;
+animation-duration: 5s;
+animation-delay: 0s;
+}
+
+/*Forside banner 1*/
+div#festival{
+background-color:#017129;
+color: white;
+
+padding-bottom: 5px;
+margin-top: 30px;
+margin-right: 30px;
+margin-left: 30px;
+box-shadow: 7px 7px 12px 7px rgb(47, 47, 47);
+}
+
+div#festival > img{
+width: 40%;
+height: 383px;
+display: flex;
+float: right;
+}
+
+div#festival > a{
+text-decoration: none;
+color: black;
+}
+div#festival > a > p#knap{
+background-color: white;
+margin-left: 340px; 
+margin-right: 900px;
+border-radius: 4px;
+opacity: 90%
+}
+p#knap:hover{
+background-color:#ffad28;
+color: #ffad28;
+}
+
+div#festival > p {
+color: white;
+}
+/*Forside banner 2*/
+div#fodbold{
+background-color:#ffad28;
+color: white;
+
+padding-bottom: 138px;
+margin-right: 30px;
+margin-left: 30px;
+margin-bottom: 80px;
+margin-top: 70px;
+box-shadow: 7px 7px 12px 7px rgb(47, 47, 47);
+}
+div#fodbold > img{
+width: 50%;
+display: flex;
+float: left;
+}
+
+div#fodbold > p {
+color: white;
+margin-left: 20px;
+margin-right: 20px;
+}
+/*Overskrift til begge bannere*/
+h1.forside{
+color: white; 
+padding-top: 50px;
+text-align: center;
+}
+
+
+
+/*KONKURRENCESIDEN*/
+
+/*Cards*/
+
+section#kort {
+font-family:'Epilogue', sans-serif;
+color: black; 
+width:100%;
+display:flex;
+justify-content:space-evenly;
+
+padding-top: 40px; 
+padding-bottom: 250px;
+
+animation: fadeIn;
+animation-duration: 3s;
+animation-delay: 0s;
+}
+h1.kort{
+  padding-top: 10px;
+}
+
+section#kort > div{
+width:300px;
+height:450px;
+padding-top:40px;
+text-align:center;
+}
+
+section#kort > div > img{
+width:300px;
+margin-bottom: 30px;
+box-shadow: 5px 10px 30px black;
+border-radius: 40px; 
+}
+
+
+/*HVORDAN ER DET BRYGGET SIDEN - MOBIL*/
+
+/*Hero section*/
+section#hero2{
+display: flex;
+justify-content: center;
+  
+width:100%;
+height: 500px;
+
+background-image:url("images/hero2.png");
+background-size:cover;
+background-repeat:no-repeat;
+
+box-shadow: 7px 7px 12px 7px rgb(47, 47, 47);
+
+animation: fadeIn;
+animation-duration: 3s;
+animation-delay: 0s;
+}
+
+section#hero2 > div > p{
+color: white;
+}
+section#hero2 > div > h2{
+color: white;
+}
+
+section#hero2 > div > hr{
+border-color:white;
+}
+
+/*Banner 1 på "Hvordan er det brygget?"-siden*/
+div#ingredienser{
+background-color:#ffad28;
+color: white;
+box-shadow: 7px 7px 12px 7px rgb(47, 47, 47);
+
+margin-top: 50px;
+margin-left: 200px;
+padding-bottom: 40px;
+
+animation: fadeIn;
+animation-duration: 3s;
+animation-delay: 0s;
+
+}
+div#ingredienser > h1{
+color: white;
+
+padding-top: 40px;
+margin-left: 110px;
+text-align: left;
+}
+div#ingredienser > p{
+color: white;
+text-align: left;
+margin-left: 150px;
+}
+section#video{
+margin-right: 90px;
+text-align: right;
+position: relative;
+bottom: 1220px;
+}
+
+section#video > p {
+width: 40%;
+text-align:justify;
+margin-left: 810px;
+margin-top: 90px;
+
+color: white;
+}
+section#video > p > a{
+color: white;
+}
+
+section#video > iframe {
+border-radius: 5px;
+margin-top: 10px; 
+}
+
+/*Banner 2 på "Hvordan er det brygget?"-siden*/
+div#galleri{
+background-color:#017129;
+color: white;
+box-shadow: 7px 7px 12px 7px rgb(47, 47, 47);
+  
+margin-top: 90px;
+margin-right: 200px;
+padding-bottom: 430px;
+  
+animation: fadeIn;
+animation-duration: 3s;
+animation-delay: 0s;
+}
+div#galleri > img {
+display: flex;
+float:right;
+padding-right: 30px;
+  
+margin-top: 60px;
+margin-right: 50px;
+
+}
+main > div#galleri > h2 {
+color: white;
+padding-top: 20px;
+}
+
+/*HISTORIEN BAG*/
+
+/*Artiklen*/
+article > h2{
+color: white;
+margin-top: 0;
+}
+
+main#historienbag > article{
+margin-left: auto;
+margin-right: auto;  
+margin-top: 70pt; 
+max-width: 900px;
+
+display: flex; 
+justify-content: center;
+flex-direction: column;
+}
+
+main#historienbag > article > section {
+margin-right: auto;
+margin-left: auto; 
+text-align: center;
+width: 90%;
+background-color: white;
+position: relative;
+bottom: 50px;  
+}
+main#historienbag > article > section > p{
+margin-top: 20pt;
+font-size: 20px;   
+letter-spacing: 0.05rem;
+font-weight: 100;
+line-height: 2;
+text-align: left;
+}
+main#historienbag > article > section > p > a{
+color: black;
+}
+main#historienbag > article > section > p#underoverskrift {
+font-size: 12pt;
+margin-bottom: 20px;
+margin-top: 20px; 
+padding-bottom: 20px; 
+padding-top: 30px; 
+margin: 0 auto;
+font-family: 'Epilogue', sans-serif;
+letter-spacing: 0.1rem;
+text-align: center;
+}
+main#historienbag > article > section > hr{
+border-color:#ffad28;
+}
+
+                /*----MAIN CONTENT SLUT----*/
+/*__________________________________________________*/
+
+/*FONTS*/
+h1{
+font-family: 'Orelega One', cursive;
+font-size: 28pt;
+color:#017129;
+}
+
+h2{
+font-family: 'Orelega One', cursive;
+text-align: center;
+font-size: 50pt; 
+color:#017129;
+
+margin-top: 60px; 
+}
+
+h3{
+font-family: 'Epilogue', sans-serif;
+font-size: 15pt;
+font-weight: bolder;
+}
+
+p{
+font-family: 'Epilogue', sans-serif;
+font-size: 17pt;
+line-height: 1.9;
+text-align: center;
+margin-top: 20px;
+color: black;
+}
+
+
+h3{
+font-family:'Epilogue', sans-serif;
+font-size: 15pt;
+text-align: center;
+}
+
+hr {
+margin-left:auto;
+margin-right: auto;
+margin-top: 40px;
+margin-bottom: 40px;
+
+border-color:#135e4d;
+width: 50px;
+}
+
+
+/*STYLING AF KILDER TIL BILLEDER*/
+p.links{
+font-size: 7pt;
+margin-left: 900px;
+}
+p.linkcenter{
+font-size: 7pt;
+margin-left: 0px;
+}
+main#historienbag > article > section > p.linkcenter{
+font-size: 7pt;
+margin-left: 0px;
+text-align: center;
+}
+
+
+/*----FOOTER----*/
+
+footer{
+padding-top:50px;
+min-height:300px;
+width:100%;
+
+background-color: white;
+text-align:left;
+
+display: flex;
+justify-content: space-evenly;
+border-top: 1px solid #52725D ;
+}
+
+footer > div > p{
+margin-top:20px;
+margin-bottom:20px;
+color:black;
+text-align: left;
+font-size: 10pt;
+}
+footer > div > h3{
+text-align: left; 
+}
+
+footer > div > p > a{
+text-decoration: none;
+color: black;
+}
+
+
+footer > .down > a > img{
+max-height:50px;
+margin-top:20px;
+}
+
+
+/* KONTAKTFORMULAR I FOOTER */
+
+aside{
+display:flex;
+flex-direction: column;
+float:right;
+}
+
+aside > div{
+float:right;
+margin-right:70px;
+padding-top:20px;
+}
+
+aside > div > p{
+padding-bottom:20px;
+}
+
+/* Generelle regler for hele formularen */
+input[type=text], select, textarea{
+display: flex;
+flex-direction: column;
+width: 100%;
+padding: 12px; 
+border: 1px solid #ccc; 
+border-radius: 4px; 
+box-sizing:border-box;
+margin-top: 6px; 
+margin-bottom: 10px; 
+resize: vertical;
+font-family: 'Epilogue', sans-serif;
+}
+
+/* Styling af "send besked" knappen */
+input[type=submit] {
+background-color:white;
+color: black;
+font-family: 'Epilogue', sans-serif;
+padding: 12px 20px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+/* hover på "send knappen"*/
+input[type=submit]:hover {
+background-color:#ffad28;
+}
+
+/* baggrundsfarve og padding på kontaktformularen */
+.contactcontainer {
+border-radius: 5px;
+background-color:#017129;
+padding: 10px;
+font-family: 'Epilogue', sans-serif;
+margin-bottom: 120px;
+}
+
+
+
+/*----MEDIA QUERIES TIL ALLE SIDER----*/          
+
+@media only screen and (min-width:1000px){
+  /* header */
+ #mobilemenubutton{
+  display: none;
+  }
+}
+
+@media only screen and (max-width:1000px){
+  /* HEADER */
+  #desktopmenu{
+  display: none;
+  }
+  img#logo {
+  position: fixed;
+  bottom: 88%;
+  left: 30%;
+  }
+
+  /* FORSIDEN - MOBIL */
+  main{
+  flex-direction: column;
+  }
+  section#hero{
+  height: auto;
+  background-position: center;
+  }
+  section#hero > div > h2{
+  font-size: 50pt;
+  margin-bottom: 70px; 
+  }
+  img.forside{
+  min-width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+  }
+  div#festival > a > p#knap{
+  background-color: white;
+  margin-right: 150px;
+  margin-left: 150px;
+  opacity: 90%
+  }
+  p#knap:hover{
+  background-color:#ffad28;
+  color: #ffad28;
+  }
+
+  /*KONKURRENCESIDEN*/
+  section#kort{
+  flex-direction: column;
+  align-items: center;
+  }
+  section#kort > div{
+    padding-bottom: 100px;
+  }
+  /*HVORDAN ER DET BRYGGET?*/
+  div#ingredienser{
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+  }
+  div#ingredienser > p{
+  margin-left: 120px;
+  margin-right: 20px;
+  }
+  section#video{
+  bottom: 1600px;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  }
+  section#video > p{
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 90%;
+  color: black;
+  padding-top: 0;
+  }
+  section#video > p > a{
+  color: black;
+  }
+  section#video > iframe{
+  width: 450px;
+  }
+  div#galleri{
+  margin-top: 700px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-bottom: 650px;
+  width: 90%;
+  }
+  div#galleri > img{
+  max-width: 90%;
+  margin-right: 0;
+  }
+
+  /*HISTORIEN BAG*/
+  img#bånd{
+  max-width: 100%;
+  }
+
+  /*FONTS*/
+  h2{
+  margin-left: 5px;
+  margin-right: 5px;
+  }
+  p{
+  margin-left: 10px;
+  margin-right: 10px;
+  }
+
+  /*STYLING AF KILDER TIL BILLEDER*/
+  p.links{
+  font-size: 7pt;
+  margin-left: 0;
+  }  
+
+  /* FOOTER */
+  footer{
+  flex-direction: column;
+  align-items: center;
+  }
+  footer > div > h3{
+  text-align: center;
+  }
+}
+
